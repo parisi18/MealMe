@@ -27,6 +27,7 @@ jobs:
 
     - name: Configure CMake
       run: cmake -S . -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      working-directory: ${{github.workspace}}
 
     - name: Test
       working-directory: ${{github.workspace}}/build
