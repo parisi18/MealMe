@@ -26,8 +26,8 @@ jobs:
         version: "6.3.2"  # Qt 6.3 is not an LTS version, so '6.3.*' always resolves to '6.3.2'
 
     - name: Configure CMake
+      working-directory: ${{github.workspace}}/MealMe
       run: cmake -S . -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
-      working-directory: ${{github.workspace}}
 
     - name: Test
       working-directory: ${{github.workspace}}/build
