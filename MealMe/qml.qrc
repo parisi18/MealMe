@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file alias="main">qml/main.qml</file>
+        <file alias="splash">qml/splashScreen.qml</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>qml/components/CircularProgressBar.qml</file>
+        <file>qml/components/CustomButton.qml</file>
+        <file>qml/components/CustomTextField.qml</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="logo">images/logo.png</file>
+    </qresource>
+</RCC>
