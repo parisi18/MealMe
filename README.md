@@ -1,5 +1,7 @@
 MENU HERE...
-IN PROGRESS 😄
+IN PROGRESS 😄  
+
+obs: aqui irei postar não só o desafio, mas os conhecimentos gerados que me levaram à implementação.
 
 # Desafio QT/QML 🇧🇷  
 
