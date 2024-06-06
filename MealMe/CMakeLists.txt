@@ -11,9 +11,13 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Add subdirectory for setup
+add_subdirectory(setup)
+
 qt_add_executable(${PROJECT_NAME}
     main.cpp
     qml.qrc
+    ${PROJECT_SOURCES}
 )
 
 qt_add_qml_module(${PROJECT_NAME}
@@ -25,12 +29,14 @@ qt_add_qml_module(${PROJECT_NAME}
         qml/components/CircularProgressBar.qml
         qml/components/CustomButton.qml
         qml/components/CustomTextField.qml
+        qml/components/SplashAnimation.qml
     RESOURCES
         images/logo.png
+        #RESOURCES MealMe/CMakeLists.txt
 )
 
 target_link_libraries(${PROJECT_NAME}
-    PRIVATE Qt6::Quick
+    PRIVATE Qt6::Quick setup_library
 )
 
 include(GNUInstallDirs)

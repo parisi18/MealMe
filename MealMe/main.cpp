@@ -1,11 +1,18 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include "AppManager.h"
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
+
+    // exposing C++ object to Qml
+    AppManager *appManager = new AppManager(&app);
+    engine.rootContext()->setContextProperty("appManager", appManager);
+
     const QUrl url(u"qrc:/qml/splash"_qs);
     QObject::connect(
         &engine,

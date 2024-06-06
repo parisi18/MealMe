@@ -4,46 +4,37 @@ import QtQuick.Window 2.15
 
 Window {
     id: splashScreen
+
+    readonly property color darkColor: "#31363F"
+    readonly property color lightColor: "#EEEEEE"
+
     width: 1360
     height: 768
     visible: true
     title: qsTr("Hello, " + username)
-    color: "#151515"
+
+    color: appManager.isNightMode ? splashScreen.darkColor : splashScreen.lightColor
 
     // Custom Properties
     property string username
     property string password
 
-    Label {
-        id: label1
-        x: 55
-        y: 330
-        opacity: 1
-        color: "#ffffff"
-        text: qsTr("Your password: " + password)
-        anchors.verticalCenter: label.verticalCenter
-        anchors.verticalCenterOffset: 20
-        font.family: "Segoe UI"
-        anchors.bottomMargin: 20
-        anchors.horizontalCenterOffset: 0
-        anchors.horizontalCenter: parent.horizontalCenter
-        font.pointSize: 10
+    Column {
+        anchors.centerIn: parent
+        spacing: 20
+        Text {
+          color: appManager.isNightMode ? splashScreen.lightColor : splashScreen.darkColor
+          text: qsTr("Is night mode on? - ") + appManager.isNightMode
+        }
+
+        Button {
+          anchors.horizontalCenter: splashScreen.horizontalCenter
+          text: qsTr("Change mode")
+          palette.buttonText: splashScreen.lightColor
+          // change isNightMode on clicked
+          onClicked: {
+            appManager.isNightMode = !appManager.isNightMode
+          }
+        }
     }
-
-    Label {
-        id: label
-        x: 100
-        y: 294
-        opacity: 1
-        color: "#ffffff"
-        text: qsTr("Hello, " + username)
-        anchors.verticalCenter: parent.verticalCenter
-        font.family: "Segoe UI"
-        anchors.bottomMargin: 10
-        anchors.horizontalCenter: parent.horizontalCenter
-        font.pointSize: 16
-    }
-
-
-
 }

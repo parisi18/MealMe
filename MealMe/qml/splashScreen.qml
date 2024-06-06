@@ -1,8 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
-import Qt5Compat.GraphicalEffects
-import QtQuick.Timeline 1.0
+
 import "components"
 
 Window {
@@ -14,7 +13,7 @@ Window {
     title: qsTr("MealMe")
 
     // Remove Title Bar
-    flags: Qt.SplashScreen | Qt.FramelessWindowHint
+    flags: Qt.Window | Qt.FramelessWindowHint
 
     // Internal Functions
     QtObject{
@@ -31,24 +30,6 @@ Window {
             }
         }
     }
-
-    //// Properties
-    // property int timeInterval: 3000
-    //
-    // Timer{
-    //     id: timer
-    //     interval: timeInterval
-    //     running: true
-    //     repeat: false
-    //     onTriggered: {
-    //         var component = Qt.createComponent("main.qml")
-    //         var win = component.createObject()
-    //         win.username = "No name"
-    //         win.password = "No password"
-    //         win.show()
-    //         visible = false
-    //     }
-    // }
 
     Rectangle {
         id: bg
@@ -71,7 +52,7 @@ Window {
             value: 100
             progressWidth: 8
             strokeBgWidth: 4
-            progressColor: "#67aa25"
+            progressColor: "#D35027"
             anchors.horizontalCenter: parent.horizontalCenter
         }
 
@@ -152,7 +133,7 @@ Window {
             y: 294
             opacity: 1
             color: "#ffffff"
-            text: qsTr("Sign in to GitHub")
+            text: qsTr("Sign in to MealMe")
             anchors.bottom: label1.top
             anchors.bottomMargin: 10
             font.family: "Segoe UI"
@@ -181,197 +162,6 @@ Window {
 
     }
 
-    DropShadow{
-        anchors.fill: bg
-        source: bg
-        verticalOffset: 0
-        horizontalOffset: 0
-        radius: 10
-        color: "#40000000"
-        z: 0
-    }
+    SplashAnimation{}
 
-    Timeline {
-        id: timeline
-        animations: [
-            TimelineAnimation {
-                id: timelineAnimation
-                duration: 3000
-                running: true
-                loops: 1
-                to: 3000
-                from: 0
-            }
-        ]
-        enabled: true
-        startFrame: 0
-        endFrame: 3000
-
-        KeyframeGroup {
-            target: circularProgressBar
-            property: "value"
-            Keyframe {
-                frame: 0
-                value: 0
-            }
-
-            Keyframe {
-                frame: 1300
-                value: 100
-            }
-        }
-
-        KeyframeGroup {
-            target: circularProgressBar
-            property: "opacity"
-            Keyframe {
-                frame: 1301
-                value: 1
-            }
-
-            Keyframe {
-                frame: 1800
-                value: 0
-            }
-
-            Keyframe {
-                frame: 0
-                value: 1
-            }
-        }
-
-        KeyframeGroup {
-            target: logoImage
-            property: "opacity"
-            Keyframe {
-                frame: 1801
-                value: 0
-            }
-
-            Keyframe {
-                frame: 2300
-                value: 1
-            }
-
-            Keyframe {
-                frame: 0
-                value: 0
-            }
-        }
-
-        KeyframeGroup {
-            target: label
-            property: "opacity"
-            Keyframe {
-                frame: 1899
-                value: 0
-            }
-
-            Keyframe {
-                frame: 2396
-                value: 1
-            }
-
-            Keyframe {
-                frame: 0
-                value: 0
-            }
-        }
-
-        KeyframeGroup {
-            target: label1
-            property: "opacity"
-            Keyframe {
-                frame: 1996
-                value: 0
-            }
-
-            Keyframe {
-                frame: 2504
-                value: 1
-            }
-
-            Keyframe {
-                frame: 0
-                value: 0
-            }
-        }
-
-        KeyframeGroup {
-            target: textUsername
-            property: "opacity"
-            Keyframe {
-                frame: 2097
-                value: 0
-            }
-
-            Keyframe {
-                frame: 2652
-                value: 1
-            }
-
-            Keyframe {
-                frame: 0
-                value: 0
-            }
-        }
-
-        KeyframeGroup {
-            target: textPassword
-            property: "opacity"
-            Keyframe {
-                frame: 2198
-                value: 0
-            }
-
-            Keyframe {
-                frame: 2796
-                value: 1
-            }
-
-            Keyframe {
-                frame: 0
-                value: 0
-            }
-        }
-
-        KeyframeGroup {
-            target: btnLogin
-            property: "opacity"
-            Keyframe {
-                frame: 2298
-                value: 0
-            }
-
-            Keyframe {
-                frame: 2951
-                value: 1
-            }
-
-            Keyframe {
-                frame: 0
-                value: 0
-            }
-        }
-
-        KeyframeGroup {
-            target: bg
-            property: "height"
-            Keyframe {
-                frame: 1301
-                value: 360
-            }
-
-            Keyframe {
-                easing.bezierCurve: [0.221,-0.00103,0.222,0.997,1,1]
-                frame: 1899
-                value: 560
-            }
-
-            Keyframe {
-                frame: 0
-                value: 360
-            }
-        }
-    }
 }
