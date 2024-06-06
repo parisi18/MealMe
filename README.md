@@ -1,7 +1,7 @@
 IN PROGRESS 😄  
 
 <details>
-<summary>DESCRIÇÃO DO DESAFIO // CHALLENGE DESCRIPTION </summary>
+<summary>DESCRIÇÃO DO DESAFIO 🇧🇷 // CHALLENGE DESCRIPTION 🇺🇸 </summary>
 <details>
 <summary>Desafio QT/QML 🇧🇷 </summary> 
 
