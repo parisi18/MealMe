@@ -33,6 +33,7 @@
 
 # Build outputs
 build-*
+build/
 
 #User configs
 *.user
