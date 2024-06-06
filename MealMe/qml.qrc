@@ -8,6 +8,7 @@
         <file>qml/components/CustomButton.qml</file>
         <file>qml/components/CustomTextField.qml</file>
         <file>qml/components/SplashAnimation.qml</file>
+        <file>qml/components/WindowMode.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="logo">images/logo.png</file>

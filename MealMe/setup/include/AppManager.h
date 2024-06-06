@@ -2,6 +2,8 @@
 #define APPMANAGER_H
 
 #include <QObject>
+#include <QTimer>
+#include <QRandomGenerator>
 
 class AppManager : public QObject
 {
@@ -14,8 +16,12 @@ public:
     bool isNightMode() const;
     void setIsNightMode(bool isNightMode);
 
+public slots:
+    void performOperation();
+
 signals:
     void isNightModeChanged();
+    void operationFinished(const QString &operationResult);
 
 private:
     bool m_isNightMode = false;
