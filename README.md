@@ -1,9 +1,9 @@
-MENU HERE...
 IN PROGRESS 😄  
 
-obs: aqui irei postar não só o desafio, mas os conhecimentos gerados que me levaram à implementação.
-
-# Desafio QT/QML 🇧🇷  
+<details>
+<summary>DESCRIÇÃO DO DESAFIO // CHALLENGE DESCRIPTION </summary>
+<details>
+<summary>Desafio QT/QML 🇧🇷 </summary> 
 
 O desafio consiste no seguinte: com base no CSV em anexo, construa um método que receba uma hora do dia como input no formato HH:MM, sendo HH entre 1 e 24 e MM entre 00 e 60, e retorne uma lista de strings com os nomes dos restaurantes que estão abertos nessa hora. 
 Exemplo: `availableHours("17:45");` retornando `["RestaurantA", "RestaurantB"]`.
@@ -34,8 +34,10 @@ Documentações QT:
 - [Qt 5 QML Modules](https://doc.qt.io/qt-5/qtqml-modules-topic.html)  
 - [Qt 6.5 QML Book](https://www.qt.io/product/qt6/qml-book) (Se decidir usar Qt 6.5)  
 
+</details>
 
-# QT/QML Challenge 🇺🇸   
+<details>
+<summary>QT/QML Challenge 🇺🇸 </summary> 
 
 The challenge consists of the following: based on the attached CSV, build a method that receives a time of day as input in the format HH:MM, where HH is between 1 and 24 and MM is between 00 and 60, and returns a list of strings with the names of the restaurants that are open at that time. 
 Example: `availableHours("17:45");` returning `["RestaurantA", "RestaurantB"]`.
@@ -67,3 +69,7 @@ Qt Documentations:
 - [QML Book](http://qmlbook.github.io/)  
 - [Qt 5 QML Modules](https://doc.qt.io/qt-5/qtqml-modules-topic.html)  
 - [Qt 6.5 QML Book](https://www.qt.io/product/qt6/qml-book) (If you decide to use Qt 6.5)  
+
+</details>
+</details>
+
