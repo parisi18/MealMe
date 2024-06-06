@@ -20,5 +20,15 @@ Window {
     property string username
     property string password
 
-    WindowMode{}
+    Rectangle{
+        id: mode_switch_rect
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        Operation{}
+
+        // WindowMode{}
+    }
+
+
 }

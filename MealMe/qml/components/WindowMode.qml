@@ -4,7 +4,7 @@ import QtQuick.Window 2.15
 
 
 Column {
-    anchors.centerIn: parent.top
+    anchors.centerIn: parent
     spacing: 20
     Text {
       color: appManager.isNightMode ? splashScreen.lightColor : splashScreen.darkColor

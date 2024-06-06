@@ -9,6 +9,7 @@
         <file>qml/components/CustomTextField.qml</file>
         <file>qml/components/SplashAnimation.qml</file>
         <file>qml/components/WindowMode.qml</file>
+        <file>qml/components/Operation.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="logo">images/logo.png</file>
