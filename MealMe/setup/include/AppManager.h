@@ -4,11 +4,13 @@
 #include <QObject>
 #include <QTimer>
 #include <QRandomGenerator>
+#include <qqml.h>
 
 class AppManager : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool isNightMode READ isNightMode WRITE setIsNightMode NOTIFY isNightModeChanged)
+    QML_ELEMENT
 
 public:
     explicit AppManager(QObject *parent = nullptr);

@@ -33,6 +33,9 @@ qt_add_qml_module(${PROJECT_NAME}
     RESOURCES
         images/logo.png
         #RESOURCES MealMe/CMakeLists.txt
+    SOURCES
+        setup/include/AppManager.h
+        setup/src/AppManager.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}
